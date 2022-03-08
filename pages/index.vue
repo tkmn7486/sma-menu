@@ -6,7 +6,7 @@
           <div class="item-box">
             <div class="border-line bg-white-700 text-black">
               <nuxt-link :to="`/${content.id}`">
-              {{ content.model_name }}
+              <p class="content-model-name">{{ content.model_name }}</p>
               </nuxt-link>
             </div>
           </div>
@@ -38,20 +38,24 @@ export default {
 </script>
 
 <style>
-.app{
-  text-align:center;
-}
-
 .border-line{
   border:solid;
   border-radius:10px;
 }
 
+.main-contents{
+  text-align:center;
+}
+
 .item-box{
   padding:10px;
+  display:inline-block;
   width:30%;
   height:150%;
-  margin:0 auto;
+}
+
+.content-model-name{
+  font-size:30px;
 }
 
 h2{
