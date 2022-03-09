@@ -8,7 +8,7 @@
 
           <div class="low">
             <div class="fp-img">
-              <img class="img" src="../logo.png" alt="">
+              <img class="img" src="./fp_img.jpg" alt="">
             </div>
             <div class="cont">
               <h3 class="fp-name">互換パネル</h3>
@@ -27,7 +27,7 @@
 
           <div class="middle">
             <div class="fp-img">
-              <img class="img" src="../logo.png" alt="">
+              <img class="img" src="./fp_img.jpg" alt="">
             </div>
             <div class="cont">
               <h3 class="fp-name">高品質パネル</h3>
@@ -46,7 +46,7 @@
 
           <div class="high">
             <div class="fp-img">
-              <img class="img" src="../logo.png" alt="">
+              <img class="img" src="./fp_img.jpg" alt="">
             </div>
             <div class="cont">
               <h3 class="fp-name">超高品質パネル</h3>
