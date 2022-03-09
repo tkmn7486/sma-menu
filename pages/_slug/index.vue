@@ -9,7 +9,7 @@
           <div class="low">
 <<<<<<< HEAD
             <div class="fp-img">
-              <img class="img" src="./fp_img.jpg" alt="">
+              <img class="img" src="../logo.png" alt="">
             </div>
 =======
             <img class="fp-img" src="" alt="">
@@ -32,7 +32,7 @@
           <div class="middle">
 <<<<<<< HEAD
             <div class="fp-img">
-              <img class="img" src="./fp_img.jpg" alt="">
+              <img class="img" src="../logo.png" alt="">
             </div>
 =======
             <img class="fp-img" :src="front1_img" alt="">
@@ -55,7 +55,7 @@
           <div class="high">
 <<<<<<< HEAD
             <div class="fp-img">
-              <img class="img" src="./fp_img.jpg" alt="">
+              <img class="img" src="../logo.png" alt="">
             </div>
 =======
             <img class="fp-img" src="" alt="">
