@@ -1,92 +1,99 @@
 <template>
   <main class="main">
     <TheHead />
-    <div class="border-line">
+    <div class="border-line2">
       <div class="contents-box">
         <h1 class="model-name">{{ model_name }}</h1>
         <div class="fp-box">
 
           <div class="low">
-<<<<<<< HEAD
             <div class="fp-img">
               <img class="img" src="../logo.png" alt="">
             </div>
-=======
-            <img class="fp-img" src="" alt="">
->>>>>>> parent of 193ccff (updata)
             <div class="cont">
               <h3 class="fp-name">互換パネル</h3>
-              <table>
+              <table class="fp-table">
                 <tr>
-                  <th class="fp-label">保証なし</th>
-                  <th class="fp-label">保証あり</th>
+                  <th class="fp-label1">保証なし</th>
+                  <th class="fp-label2">保証あり</th>
                 </tr>
                 <tr>
-                  <td>{{front1_ng}}円（税抜）</td>
-                  <td>{{front1_g}}円（税抜）</td>
+                  <td class="fp-price">{{front1_ng}}<span>円（税抜）</span></td>
+                  <td class="fp-price">{{front1_g}}<span>円（税抜）</span></td>
                 </tr>
               </table>
             </div>
           </div>
 
           <div class="middle">
-<<<<<<< HEAD
             <div class="fp-img">
               <img class="img" src="../logo.png" alt="">
             </div>
-=======
-            <img class="fp-img" :src="front1_img" alt="">
->>>>>>> parent of 193ccff (updata)
             <div class="cont">
               <h3 class="fp-name">高品質パネル</h3>
-              <table>
+              <table class="fp-table">
                 <tr>
                   <th class="fp-label">保証なし</th>
                   <th class="fp-label">保証あり</th>
                 </tr>
                 <tr>
-                  <td>{{front2_ng}}円（税抜）</td>
-                  <td>{{front2_g}}円（税抜）</td>
+                  <td class="fp-price">{{front2_ng}}<span>円（税抜）</span></td>
+                  <td class="fp-price">{{front2_g}}<span>円（税抜）</span></td>
                 </tr>
               </table>
             </div>
           </div>
 
           <div class="high">
-<<<<<<< HEAD
             <div class="fp-img">
               <img class="img" src="../logo.png" alt="">
             </div>
-=======
-            <img class="fp-img" src="" alt="">
->>>>>>> parent of 193ccff (updata)
             <div class="cont">
               <h3 class="fp-name">超高品質パネル</h3>
-              <table>
+              <table class="fp-table">
                 <tr>
                   <th class="fp-label">保証なし</th>
                   <th class="fp-label">保証あり</th>
                 </tr>
                 <tr>
-                  <td>{{front3_ng}}円（税抜）</td>
-                  <td>{{front3_g}}円（税抜）</td>
+                  <td class="fp-price">{{front3_ng}}<span>円（税抜）</span></td>
+                  <td class="fp-price">{{front3_g}}<span>円（税抜）</span></td>
                 </tr>
               </table>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="spec-table">
       <!-- 性能などの比較表 -->
-      <table>
-        <tr>
-          <th></th>
-          <th>互換</th>
-          <th>高品質</th>
-          <th>超高品質</th>
-        </tr>
-      </table>
+      <div class="spec-table-space">
+        <table class="spec">
+          <tr>
+            <th></th>
+            <th><h3 class="fp-type1">互換</h3></th>
+            <th><h3 class="fp-type2">高品質</h3></th>
+            <th><h3 class="fp-type3">超高品質</h3></th>
+          </tr>
+          <tr>
+            <td>画質（品質）</td>
+            <td>△</td>
+            <td>◯</td>
+            <td>◎</td>
+          </tr>
+          <tr>
+            <td>消費電力</td>
+            <td>△</td>
+            <td>◯</td>
+            <td>◯</td>
+          </tr>
+          <tr>
+            <td>料金</td>
+            <td>◎</td>
+            <td>◯</td>
+            <td>△</td>
+          </tr>
+        </table>
+      </div>
+
     </div>
     <p class="published-at">最終更新日：{{ publishedAt }}</p>
   </main>
@@ -113,10 +120,9 @@ export default {
 
 <style>
 
-.border-line{
-  width:80%;
+.border-line2{
+  width:100%;
   margin:0 auto;
-  border:none white;
 }
 
 .published-at{
@@ -135,11 +141,16 @@ export default {
 
 .model-name{
   text-align:center;
-  font-size:30px;
+  font-size:40px;
+  border-bottom:dashed gray;
+  margin-bottom:50px;
+  font-weight:bold;
 }
 
 .fp-name{
   border-bottom:dotted black;
+  font-weight:bold;
+  font-size:120%;
 }
 
 .cont{
@@ -149,31 +160,96 @@ export default {
 }
 
 .low{
-  background-color:gray;
+  background-color:#C47022;
   border-radius:10px;
   display:inline-block;
   margin:10px 5px;
+  width:30%;
 }
 
 .middle{
-  background-color:aquamarine;
+  background-color:#C9CACA;
   border-radius:10px;
   display:inline-block;
   margin:10px 5px;
+  width:35%;
 }
 
 .high{
-  background-color:yellow;
+  background-color:#DAB300;
   border-radius:10px;
   display:inline-block;
   margin:10px 5px;
+  width:30%;
 }
 
-th .fp-label{
-  width:50%;
+.fp-type1{
+  background-color:#C47022;
+  border-radius:10px;
+  color:white;
+}
+
+.fp-type2{
+  background-color:#C9CACA;
+  border-radius:10px;
+  color:white;
+}
+
+.fp-type3{
+  background-color:#DAB300;
+  border-radius:10px;
+  color:white;
+}
+
+.fp-table{
+  margin:0 auto;
+}
+
+.fp-label{
+  text-align:center;
+}
+
+.spec{
+  border-radius:10px;
+  background-color:#10101010;
+  margin:0 auto;
+  text-align:center;
+}
+
+.spec th{
+  width:20%;
+}
+
+.fp-img{
+  margin:0 auto;
+  width:200px;
+}
+
+.img{
+  border-radius:10px;
+  margin-top:10px;
 }
 
 .spec-table{
   text-align:center;
+  margin:0 auto;
+}
+
+td{
+  text-align:center;
+  border:solid white;
+}
+
+.fp-price{
+  font-size:20px;
+}
+
+.spec-table-space{
+  margin-top:20px;
+}
+
+span{
+  margin-left:5px;
+  font-size:13px;
 }
 </style>
