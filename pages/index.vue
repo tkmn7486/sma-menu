@@ -3,12 +3,10 @@
     <TheHead/>
     <div class="main-contents">
         <div v-for="content in contents" :key="content.id" class="menu">
-          <div class="item-box">
-            <div class="border-line bg-white-700 text-black">
-              <nuxt-link :to="`/${content.id}`">
-              {{ content.model_name }}
-              </nuxt-link>
-            </div>
+          <div class="link-border">
+            <nuxt-link :to="`/${content.id}`">
+            {{ content.model_name }}
+            </nuxt-link>
           </div>
         </div>
     </div>
@@ -26,7 +24,7 @@ export default {
   async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://sma-tools.microcms.io/api/v1/iphone-repair',
+      'https://sma-tools.microcms.io/api/v1/iphone-repair?limit=50',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': 'c40a31162fe14cca8714a9dd34fc021c0438' }
@@ -42,16 +40,26 @@ export default {
   text-align:center;
 }
 
+.main-contents{
+  margin-top:20px;
+}
+
 .border-line{
   border:solid;
   border-radius:10px;
 }
 
-.item-box{
-  padding:10px;
-  width:30%;
-  height:150%;
-  margin:0 auto;
+.menu{
+  display:inline-block;
+  margin:10px;
+}
+
+.link-border{
+  padding:5px;
+  border:solid;
+  border-radius:10px;
+  width:200px;
+  display:inline-block;
 }
 
 h2{

@@ -74,7 +74,13 @@
             <th><h3 class="fp-type3">超高品質</h3></th>
           </tr>
           <tr>
-            <td>画質（品質）</td>
+            <td>液晶表示</td>
+            <td>△</td>
+            <td>◯</td>
+            <td>◎</td>
+          </tr>
+          <tr>
+            <td>明るさ</td>
             <td>△</td>
             <td>◯</td>
             <td>◎</td>
@@ -91,6 +97,12 @@
             <td>◯</td>
             <td>△</td>
           </tr>
+          <tr>
+            <td>耐久性</td>
+            <td>△</td>
+            <td>◯</td>
+            <td>◯</td>
+          </tr>
         </table>
       </div>
 
@@ -103,6 +115,12 @@
 import axios from 'axios'
 import TheHead from "@/components/TheHead.vue"
 export default {
+  setup(){
+    const lsView = "none";
+    return{
+      lsView,
+    }
+  },
   components:{
     TheHead,
   },
